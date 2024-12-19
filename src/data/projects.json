@@ -19,32 +19,26 @@
     },
     {
         "id": 4,
-        "title": "Traefik",
-        "description": "The Cloud Native Edge Router",
-        "link": "https://traefik.kooked.ch"
+        "title": "Markdown to PDF",
+        "description": "A web application to convert markdown to pdf",
+        "link": "https://md2pdf.kooked.app"
     },
     {
         "id": 5,
         "title": "Password Game",
         "description": "A small game to guess the password",
-        "link": "https://password.kooked.ch"
-    },
-    {
-        "id": 6,
-        "title": "Nodered",
-        "description": "A flow-based development tool for visual programming",
-        "link": "https://nodered.kooked.ch"
+        "link": "https://password-game.kooked.app"
     },
     {
         "id": 7,
-        "title": "Moodle",
-        "description": "A learning platform",
-        "link": "https://moodle.kooked.ch"
+        "title": "Url Shortener",
+        "description": "A simple url shortener",
+        "link": "https://go.kooked.app"
     },
     {
         "id": 8,
-        "title": "Alertmanager",
-        "description": "Manage and send alerts",
-        "link": "https://am.kooked.ch"
+        "title": "API ICT",
+        "description": "API for the ICT module",
+        "link": "https://api-ict.kooked.app"
     }
 ]
