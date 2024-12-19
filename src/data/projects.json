@@ -30,6 +30,12 @@
         "link": "https://password-game.kooked.app"
     },
     {
+        "id": 6,
+        "title": "Uptime Kuma",
+        "description": "A web application to monitor the uptime of websites",
+        "link": "https://kuma.kooked.app"
+    },
+    {
         "id": 7,
         "title": "Url Shortener",
         "description": "A simple url shortener",
