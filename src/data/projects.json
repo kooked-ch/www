@@ -46,5 +46,11 @@
         "title": "API ICT",
         "description": "API for the ICT module",
         "link": "https://api-ict.kooked.app"
+    },
+    {
+        "id": 9,
+        "title": "Kooked Moodle",
+        "description": "Moodle for the Kooked team",
+        "link": "https://moodle.kooked.ch"
     }
 ]
