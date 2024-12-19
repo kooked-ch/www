@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { sendEmail } from '@/lib/email';
 import { z } from 'zod';
 
-// Helper function to escape HTML
 const escapeHtml = (unsafe: string) => {
 	return unsafe.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
 };
