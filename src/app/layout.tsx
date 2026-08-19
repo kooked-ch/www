@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
@@ -11,10 +11,32 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Kooked",
-  description: "Kooked designs and self-hosts a collection of apps and services.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Hero");
+  const title = "Kooked";
+  const description = t("description");
+
+  return {
+    metadataBase: new URL("https://kooked.ch"),
+    title: {
+      default: title,
+      template: `%s — ${title}`,
+    },
+    description,
+    openGraph: {
+      title,
+      description,
+      url: "https://kooked.ch",
+      siteName: title,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
 
 export const dynamic = "force-dynamic";
 
