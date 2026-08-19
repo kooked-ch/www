@@ -12,9 +12,11 @@ const manrope = Manrope({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("Hero");
+  const translation = {
+    hero: await getTranslations("Hero"),
+  };
   const title = "Kooked";
-  const description = t("description");
+  const description = translation.hero("description");
 
   return {
     metadataBase: new URL("https://kooked.ch"),

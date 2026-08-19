@@ -18,7 +18,9 @@ type FormData = z.infer<typeof contactFormSchema>;
 type FormErrors = Partial<Record<keyof FormData, boolean>> & { form?: boolean };
 
 export function ContactForm() {
-  const t = useTranslations("Contact");
+  const translation = {
+    contact: useTranslations("Contact"),
+  };
   const [formData, setFormData] = useState<FormData>({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<FormErrors>({});
   const [status, setStatus] = useState<"idle" | "sending" | "success">("idle");
@@ -62,44 +64,46 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="mx-auto flex w-full max-w-md flex-col gap-4">
       <div className="grid gap-2">
-        <Label htmlFor="name">{t("name")}</Label>
+        <Label htmlFor="name">{translation.contact("name")}</Label>
         <Input
           id="name"
-          placeholder={t("namePlaceholder")}
+          placeholder={translation.contact("namePlaceholder")}
           value={formData.name}
           onChange={handleChange}
           aria-invalid={errors.name}
         />
-        {errors.name && <p className="text-sm text-destructive">{t("errors.name")}</p>}
+        {errors.name && <p className="text-sm text-destructive">{translation.contact("errors.name")}</p>}
       </div>
       <div className="grid gap-2">
-        <Label htmlFor="email">{t("email")}</Label>
+        <Label htmlFor="email">{translation.contact("email")}</Label>
         <Input
           id="email"
           type="email"
-          placeholder={t("emailPlaceholder")}
+          placeholder={translation.contact("emailPlaceholder")}
           value={formData.email}
           onChange={handleChange}
           aria-invalid={errors.email}
         />
-        {errors.email && <p className="text-sm text-destructive">{t("errors.email")}</p>}
+        {errors.email && <p className="text-sm text-destructive">{translation.contact("errors.email")}</p>}
       </div>
       <div className="grid gap-2">
-        <Label htmlFor="message">{t("message")}</Label>
+        <Label htmlFor="message">{translation.contact("message")}</Label>
         <Textarea
           id="message"
-          placeholder={t("messagePlaceholder")}
+          placeholder={translation.contact("messagePlaceholder")}
           className="min-h-32"
           value={formData.message}
           onChange={handleChange}
           aria-invalid={errors.message}
         />
-        {errors.message && <p className="text-sm text-destructive">{t("errors.message")}</p>}
+        {errors.message && <p className="text-sm text-destructive">{translation.contact("errors.message")}</p>}
       </div>
-      {errors.form && <p className="text-sm text-destructive">{t("genericError")}</p>}
-      {status === "success" && <p className="text-sm text-emerald-600 dark:text-emerald-400">{t("success")}</p>}
+      {errors.form && <p className="text-sm text-destructive">{translation.contact("genericError")}</p>}
+      {status === "success" && (
+        <p className="text-sm text-emerald-600 dark:text-emerald-400">{translation.contact("success")}</p>
+      )}
       <Button type="submit" disabled={status === "sending"} className="w-full">
-        {status === "sending" ? t("sending") : t("submit")}
+        {status === "sending" ? translation.contact("sending") : translation.contact("submit")}
       </Button>
     </form>
   );

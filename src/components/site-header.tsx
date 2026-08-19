@@ -3,7 +3,9 @@ import { getTranslations } from "next-intl/server";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 
 export async function SiteHeader() {
-  const t = await getTranslations("Nav");
+  const translation = {
+    nav: await getTranslations("Nav"),
+  };
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
@@ -16,13 +18,13 @@ export async function SiteHeader() {
             href="#projects"
             className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline"
           >
-            {t("projects")}
+            {translation.nav("projects")}
           </Link>
           <Link
             href="#contact"
             className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline"
           >
-            {t("contact")}
+            {translation.nav("contact")}
           </Link>
           <LocaleSwitcher />
         </nav>

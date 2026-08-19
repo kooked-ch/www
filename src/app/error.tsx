@@ -6,7 +6,9 @@ import { useEffect } from "react";
 import { Button, buttonVariants } from "@/components/ui/button";
 
 export default function RouteError({ error, retry }: { error: Error & { digest?: string }; retry: () => void }) {
-  const t = useTranslations("Error");
+  const translation = {
+    error: useTranslations("Error"),
+  };
 
   useEffect(() => {
     console.error(error);
@@ -14,12 +16,12 @@ export default function RouteError({ error, retry }: { error: Error & { digest?:
 
   return (
     <section className="flex flex-1 flex-col items-center justify-center gap-4 px-4 py-24 text-center">
-      <h1 className="text-3xl font-semibold tracking-tight">{t("title")}</h1>
-      <p className="text-muted-foreground">{t("description")}</p>
+      <h1 className="text-3xl font-semibold tracking-tight">{translation.error("title")}</h1>
+      <p className="text-muted-foreground">{translation.error("description")}</p>
       <div className="flex gap-3">
-        <Button onClick={() => retry()}>{t("retry")}</Button>
+        <Button onClick={() => retry()}>{translation.error("retry")}</Button>
         <Link href="/" className={buttonVariants({ variant: "outline" })}>
-          {t("home")}
+          {translation.error("home")}
         </Link>
       </div>
     </section>
