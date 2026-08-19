@@ -62,6 +62,39 @@
     }
   },
   "Footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "legalNotice": "Legal Notice"
+  },
+  "Legal": {
+    "title": "Legal Notice",
+    "operatedBy": "This website, kooked.ch, is operated by Kooked.",
+    "contactHeading": "Contact",
+    "contactIntro": "For any legal request regarding this website, please get in touch",
+    "contactFormLink": "via our contact form"
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "intro": "A short, honest policy about the little data this site handles.",
+    "collectHeading": "What we collect",
+    "collectText": "When you use the contact form, we receive the name, email address and message you provide.",
+    "useHeading": "How we use it",
+    "useText": "That information is emailed directly to the Kooked team so we can reply to you. It isn't stored in a database and isn't shared with anyone else.",
+    "cookiesHeading": "Cookies",
+    "cookiesText": "We only set one cookie, to remember your language preference (French or English). We don't use analytics or tracking cookies.",
+    "rightsHeading": "Your rights",
+    "rightsText": "You can ask us to access, correct or delete any data you've sent us",
+    "contactFormLink": "via our contact form"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has moved.",
+    "cta": "Back home"
+  },
+  "Error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again.",
+    "retry": "Try again",
+    "home": "Back home"
   }
 }

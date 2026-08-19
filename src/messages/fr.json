@@ -62,6 +62,39 @@
     }
   },
   "Footer": {
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "privacyPolicy": "Politique de confidentialité",
+    "legalNotice": "Mentions légales"
+  },
+  "Legal": {
+    "title": "Mentions légales",
+    "operatedBy": "Ce site, kooked.ch, est exploité par Kooked.",
+    "contactHeading": "Contact",
+    "contactIntro": "Pour toute demande d'ordre légal concernant ce site, vous pouvez nous contacter",
+    "contactFormLink": "via notre formulaire de contact"
+  },
+  "Privacy": {
+    "title": "Politique de confidentialité",
+    "intro": "Une politique courte et honnête sur les quelques données que ce site traite.",
+    "collectHeading": "Ce que nous collectons",
+    "collectText": "Lorsque vous utilisez le formulaire de contact, nous recevons le nom, l'adresse email et le message que vous fournissez.",
+    "useHeading": "Comment nous les utilisons",
+    "useText": "Ces informations sont envoyées par email directement à l'équipe Kooked afin de vous répondre. Elles ne sont pas stockées dans une base de données ni partagées avec qui que ce soit.",
+    "cookiesHeading": "Cookies",
+    "cookiesText": "Nous utilisons uniquement un cookie, pour mémoriser votre préférence de langue (français ou anglais). Nous n'utilisons ni analytics, ni cookies de suivi.",
+    "rightsHeading": "Vos droits",
+    "rightsText": "Vous pouvez nous demander d'accéder, de corriger ou de supprimer toute donnée que vous nous avez transmise",
+    "contactFormLink": "via notre formulaire de contact"
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "description": "La page que vous cherchez n'existe pas ou a été déplacée.",
+    "cta": "Retour à l'accueil"
+  },
+  "Error": {
+    "title": "Une erreur est survenue",
+    "description": "Une erreur inattendue s'est produite. Veuillez réessayer.",
+    "retry": "Réessayer",
+    "home": "Retour à l'accueil"
   }
 }
