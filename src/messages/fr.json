@@ -1,0 +1,14 @@
+{
+  "Nav": {
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "title": "Des outils qu'on utilise nous-mêmes.",
+    "description": "Kooked conçoit et héberge une collection grandissante d'applications et de services — pensés pour nos propres besoins, partagés avec qui en a l'usage.",
+    "cta": "Voir les projets"
+  },
+  "Footer": {
+    "rights": "Tous droits réservés."
+  }
+}
