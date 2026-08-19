@@ -8,6 +8,59 @@
     "description": "Kooked designs and self-hosts a growing collection of apps and services — built for our own needs, shared with anyone who finds them useful.",
     "cta": "View projects"
   },
+  "Projects": {
+    "heading": "Our latest projects",
+    "subheading": "A selection of the apps and services we design, host and maintain.",
+    "viewProject": "View project",
+    "items": {
+      "music": {
+        "description": "A self-hosted web app for listening to music."
+      },
+      "pictures": {
+        "description": "A self-hosted web app for viewing and sharing pictures."
+      },
+      "grafana": {
+        "description": "Monitoring and observability dashboards for our infrastructure."
+      },
+      "md2pdf": {
+        "description": "Converts Markdown documents to polished PDFs."
+      },
+      "password-game": {
+        "description": "A small game that challenges you to guess the password."
+      },
+      "uptime-kuma": {
+        "description": "Uptime monitoring for our services and side projects."
+      },
+      "url-shortener": {
+        "description": "A simple, fast URL shortener."
+      },
+      "api-ict": {
+        "description": "An API built for the ICT module."
+      },
+      "moodle": {
+        "description": "Moodle instance for the Kooked team."
+      }
+    }
+  },
+  "Contact": {
+    "heading": "Get in touch",
+    "subheading": "Have a question or a project in mind? Send us a message.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "message": "Message",
+    "messagePlaceholder": "What's on your mind?",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success": "Thanks! Your message has been sent.",
+    "genericError": "Something went wrong. Please try again.",
+    "errors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email address.",
+      "message": "Please enter a message."
+    }
+  },
   "Footer": {
     "rights": "All rights reserved."
   }

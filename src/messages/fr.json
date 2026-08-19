@@ -8,6 +8,59 @@
     "description": "Kooked conçoit et héberge une collection grandissante d'applications et de services — pensés pour nos propres besoins, partagés avec qui en a l'usage.",
     "cta": "Voir les projets"
   },
+  "Projects": {
+    "heading": "Nos derniers projets",
+    "subheading": "Une sélection des applications et services que nous concevons, hébergeons et maintenons.",
+    "viewProject": "Voir le projet",
+    "items": {
+      "music": {
+        "description": "Une application web auto-hébergée pour écouter de la musique."
+      },
+      "pictures": {
+        "description": "Une application web auto-hébergée pour voir et partager des photos."
+      },
+      "grafana": {
+        "description": "Tableaux de bord de monitoring et d'observabilité pour notre infrastructure."
+      },
+      "md2pdf": {
+        "description": "Convertit des documents Markdown en PDF soignés."
+      },
+      "password-game": {
+        "description": "Un petit jeu qui vous met au défi de deviner le mot de passe."
+      },
+      "uptime-kuma": {
+        "description": "Surveillance de la disponibilité de nos services et side-projects."
+      },
+      "url-shortener": {
+        "description": "Un raccourcisseur d'URL simple et rapide."
+      },
+      "api-ict": {
+        "description": "Une API développée pour le module ICT."
+      },
+      "moodle": {
+        "description": "Instance Moodle pour l'équipe Kooked."
+      }
+    }
+  },
+  "Contact": {
+    "heading": "Contactez-nous",
+    "subheading": "Une question ou un projet en tête ? Envoyez-nous un message.",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "email": "Email",
+    "emailPlaceholder": "vous@exemple.com",
+    "message": "Message",
+    "messagePlaceholder": "Qu'avez-vous en tête ?",
+    "submit": "Envoyer",
+    "sending": "Envoi…",
+    "success": "Merci ! Votre message a bien été envoyé.",
+    "genericError": "Une erreur est survenue. Veuillez réessayer.",
+    "errors": {
+      "name": "Veuillez saisir votre nom.",
+      "email": "Veuillez saisir une adresse email valide.",
+      "message": "Veuillez saisir un message."
+    }
+  },
   "Footer": {
     "rights": "Tous droits réservés."
   }
