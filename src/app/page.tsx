@@ -1,8 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import { ContactForm } from "@/components/contact-form";
-import { HeroScene } from "@/components/hero-scene";
+import { ContactForm } from "@/components/form";
+import { HeroScene } from "@/components/scene";
 import { projects } from "@/data/projects";
 
 export default async function Home() {
