@@ -17,6 +17,9 @@ const contactFormSchema = z.object({
 type FormData = z.infer<typeof contactFormSchema>;
 type FormErrors = Partial<Record<keyof FormData, boolean>> & { form?: boolean };
 
+const fieldClassName =
+  "rounded-none border-0 border-b border-line bg-transparent px-0 py-2 font-mono text-sm text-paper placeholder:text-fog/60 focus-visible:border-amber focus-visible:ring-0 dark:bg-transparent dark:disabled:bg-transparent";
+
 export function ContactForm() {
   const translation = {
     contact: useTranslations("Contact"),
@@ -62,20 +65,25 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mx-auto flex w-full max-w-md flex-col gap-4">
+    <form onSubmit={handleSubmit} className="flex w-full flex-col gap-5">
       <div className="grid gap-2">
-        <Label htmlFor="name">{translation.contact("name")}</Label>
+        <Label htmlFor="name" className="font-mono text-xs tracking-wide text-fog uppercase">
+          {translation.contact("name")}_
+        </Label>
         <Input
           id="name"
           placeholder={translation.contact("namePlaceholder")}
           value={formData.name}
           onChange={handleChange}
           aria-invalid={errors.name}
+          className={fieldClassName}
         />
-        {errors.name && <p className="text-sm text-destructive">{translation.contact("errors.name")}</p>}
+        {errors.name && <p className="font-mono text-xs text-destructive">{translation.contact("errors.name")}</p>}
       </div>
       <div className="grid gap-2">
-        <Label htmlFor="email">{translation.contact("email")}</Label>
+        <Label htmlFor="email" className="font-mono text-xs tracking-wide text-fog uppercase">
+          {translation.contact("email")}_
+        </Label>
         <Input
           id="email"
           type="email"
@@ -83,27 +91,35 @@ export function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           aria-invalid={errors.email}
+          className={fieldClassName}
         />
-        {errors.email && <p className="text-sm text-destructive">{translation.contact("errors.email")}</p>}
+        {errors.email && <p className="font-mono text-xs text-destructive">{translation.contact("errors.email")}</p>}
       </div>
       <div className="grid gap-2">
-        <Label htmlFor="message">{translation.contact("message")}</Label>
+        <Label htmlFor="message" className="font-mono text-xs tracking-wide text-fog uppercase">
+          {translation.contact("message")}_
+        </Label>
         <Textarea
           id="message"
           placeholder={translation.contact("messagePlaceholder")}
-          className="min-h-32"
+          className={`min-h-28 resize-none ${fieldClassName}`}
           value={formData.message}
           onChange={handleChange}
           aria-invalid={errors.message}
         />
-        {errors.message && <p className="text-sm text-destructive">{translation.contact("errors.message")}</p>}
+        {errors.message && (
+          <p className="font-mono text-xs text-destructive">{translation.contact("errors.message")}</p>
+        )}
       </div>
-      {errors.form && <p className="text-sm text-destructive">{translation.contact("genericError")}</p>}
-      {status === "success" && (
-        <p className="text-sm text-emerald-600 dark:text-emerald-400">{translation.contact("success")}</p>
-      )}
-      <Button type="submit" disabled={status === "sending"} className="w-full">
-        {status === "sending" ? translation.contact("sending") : translation.contact("submit")}
+      {errors.form && <p className="font-mono text-xs text-destructive">{translation.contact("genericError")}</p>}
+      {status === "success" && <p className="font-mono text-xs text-amber">{translation.contact("success")}</p>}
+      <Button
+        type="submit"
+        disabled={status === "sending"}
+        variant="outline"
+        className="mt-2 h-10 w-full rounded-none border-amber bg-transparent font-mono text-sm text-amber hover:bg-amber hover:text-ink dark:border-amber dark:bg-transparent dark:hover:bg-amber dark:hover:text-ink"
+      >
+        {status === "sending" ? translation.contact("sending") : `> ${translation.contact("submit")}`}
       </Button>
     </form>
   );

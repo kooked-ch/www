@@ -8,21 +8,21 @@ export async function SiteHeader() {
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line bg-ink/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 md:px-6">
-        <Link href="/" className="text-lg font-semibold tracking-tight">
+        <Link href="/" className="font-mono text-sm font-semibold tracking-[0.2em] text-paper uppercase">
           Kooked
         </Link>
         <nav className="flex items-center gap-6">
           <Link
             href="#projects"
-            className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline"
+            className="hidden font-mono text-xs tracking-wide text-fog uppercase transition-colors hover:text-amber sm:inline"
           >
             {translation.nav("projects")}
           </Link>
           <Link
             href="#contact"
-            className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline"
+            className="hidden font-mono text-xs tracking-wide text-fog uppercase transition-colors hover:text-amber sm:inline"
           >
             {translation.nav("contact")}
           </Link>

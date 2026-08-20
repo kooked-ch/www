@@ -21,7 +21,7 @@ export function LocaleSwitcher() {
   }
 
   return (
-    <div className="flex items-center gap-1 text-sm font-medium text-muted-foreground">
+    <div className="flex items-center gap-1 font-mono text-xs text-fog">
       {locales.map((l) => (
         <button
           key={l}
@@ -30,8 +30,8 @@ export function LocaleSwitcher() {
           disabled={isPending}
           aria-current={l === locale}
           className={cn(
-            "rounded-md px-1.5 py-1 uppercase transition-colors hover:text-foreground disabled:opacity-50",
-            l === locale && "text-foreground",
+            "px-1.5 py-1 uppercase transition-colors hover:text-amber disabled:opacity-50",
+            l === locale && "text-amber",
           )}
         >
           {l}

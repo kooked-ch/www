@@ -17,31 +17,32 @@ export default async function PrivacyPolicyPage() {
 
   return (
     <section className="mx-auto max-w-2xl px-4 py-16 md:px-6 md:py-24">
-      <h1 className="text-3xl font-semibold tracking-tight">{translation.privacy("title")}</h1>
-      <p className="mt-4 text-muted-foreground">{translation.privacy("intro")}</p>
-      <div className="mt-8 space-y-6 text-muted-foreground">
+      <p className="font-mono text-xs tracking-widest text-fog uppercase">/privacy</p>
+      <h1 className="mt-2 font-mono text-2xl font-semibold tracking-tight">{translation.privacy("title")}</h1>
+      <p className="mt-4 text-fog">{translation.privacy("intro")}</p>
+      <div className="mt-8 space-y-6 text-fog">
         <div>
-          <h2 className="font-medium text-foreground">{translation.privacy("collectHeading")}</h2>
+          <h2 className="font-mono text-sm font-medium text-paper">{translation.privacy("collectHeading")}</h2>
           <p className="mt-2">{translation.privacy("collectText")}</p>
         </div>
         <div>
-          <h2 className="font-medium text-foreground">{translation.privacy("useHeading")}</h2>
+          <h2 className="font-mono text-sm font-medium text-paper">{translation.privacy("useHeading")}</h2>
           <p className="mt-2">{translation.privacy("useText")}</p>
         </div>
         <div>
-          <h2 className="font-medium text-foreground">{translation.privacy("cookiesHeading")}</h2>
+          <h2 className="font-mono text-sm font-medium text-paper">{translation.privacy("cookiesHeading")}</h2>
           <p className="mt-2">{translation.privacy("cookiesText")}</p>
         </div>
         <div>
-          <h2 className="font-medium text-foreground">{translation.privacy("rightsHeading")}</h2>
+          <h2 className="font-mono text-sm font-medium text-paper">{translation.privacy("rightsHeading")}</h2>
           <p className="mt-2">
             {translation.privacy("rightsText")}{" "}
             {contactEmail ? (
-              <a href={`mailto:${contactEmail}`} className="text-primary hover:underline">
+              <a href={`mailto:${contactEmail}`} className="text-amber hover:underline">
                 {contactEmail}
               </a>
             ) : (
-              <Link href="/#contact" className="text-primary hover:underline">
+              <Link href="/#contact" className="text-amber hover:underline">
                 {translation.privacy("contactFormLink")}
               </Link>
             )}
