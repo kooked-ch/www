@@ -28,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL("https://kooked.ch"),
     title: {
       default: title,
-      template: `%s — ${title}`,
+      template: `%s - ${title}`,
     },
     description,
     openGraph: {

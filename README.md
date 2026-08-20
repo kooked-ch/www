@@ -1,6 +1,6 @@
 # kooked.ch
 
-The [kooked.ch](https://kooked.ch) landing page — a bilingual (FR/EN) showcase of the apps and services Kooked designs and self-hosts, plus a contact form.
+The [kooked.ch](https://kooked.ch) landing page - a bilingual (FR/EN) showcase of the apps and services Kooked designs and self-hosts, plus a contact form.
 
 ## Stack
 
@@ -28,10 +28,10 @@ cp .env.example .env
 
 ## Scripts
 
-- `bun run dev` — start the dev server
-- `bun run build` — production build
-- `bun run lint` — Biome check
-- `bun run format` — Biome format (writes)
+- `bun run dev` - start the dev server
+- `bun run build` - production build
+- `bun run lint` - Biome check
+- `bun run format` - Biome format (writes)
 
 ## Docker
 
@@ -40,4 +40,4 @@ docker build -t kooked-www .
 docker run -p 3000:3000 --env-file .env kooked-www
 ```
 
-Dependencies are installed with Bun, but the Next.js build and the standalone server both run under Node.js — Bun's CommonJS loader currently can't load Next 16's Turbopack-compiled server runtime.
+Dependencies are installed with Bun, but the Next.js build and the standalone server both run under Node.js - Bun's CommonJS loader currently can't load Next 16's Turbopack-compiled server runtime.

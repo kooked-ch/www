@@ -58,7 +58,7 @@
 
 :root,
 .dark {
-  /* signature palette — Kooked runs a dark operations dashboard, not a marketing page */
+  /* signature palette - Kooked runs a dark operations dashboard, not a marketing page */
   --ink: #0a0a0c;
   --panel: #131316;
   --line: #242428;
