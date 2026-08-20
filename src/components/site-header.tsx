@@ -15,13 +15,13 @@ export async function SiteHeader() {
         </Link>
         <nav className="flex items-center gap-6">
           <Link
-            href="#projects"
+            href="/#projects"
             className="hidden font-mono text-xs tracking-wide text-fog uppercase transition-colors hover:text-amber sm:inline"
           >
             {translation.nav("projects")}
           </Link>
           <Link
-            href="#contact"
+            href="/#contact"
             className="hidden font-mono text-xs tracking-wide text-fog uppercase transition-colors hover:text-amber sm:inline"
           >
             {translation.nav("contact")}
